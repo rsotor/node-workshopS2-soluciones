@@ -2,7 +2,7 @@
 
 Refactorizar el programa de la sesión 1 para usar un template engine en lugar de escribir linea a linea el código HTML.
 
-```
+```javascript
 'use strict';
 
 const http = require('http');
