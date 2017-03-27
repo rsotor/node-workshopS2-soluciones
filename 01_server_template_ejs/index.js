@@ -1,8 +1,8 @@
 'use strict';
 
-const ejs = require('ejs');
-const fs = require('fs');
 const http = require('http');
+const fs = require('fs');
+const ejs = require('ejs');
 const templateString = fs.readFileSync('views/index.ejs', 'utf-8');
 
 const params = {
@@ -14,8 +14,8 @@ const html = ejs.render(templateString, params);
 
 const server = http.createServer((req, res) => {
 	res.end(html);
-})
+});
 
-server.listen(3000);
-
-console.log(html);
+server.listen(3000, () => {
+	console.log('servidor arrancado en el puerto 3000');
+});
