@@ -5,7 +5,6 @@ const restify = require('restify');
 const server = restify.createServer();
 
 server.get('/hello/:username', (req, res, next) => {
-	console.log(req.params.username);
 	const username = req.params.username;
 	res.send('Bienvenido ' + username);
 	next();
